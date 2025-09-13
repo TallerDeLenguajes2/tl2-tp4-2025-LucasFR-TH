@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP4WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cac114ae4dbba10682628e6f6e3bfaf586994fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8c83af996352c51696c022ae40a97d9621c28ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP4WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP4WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
