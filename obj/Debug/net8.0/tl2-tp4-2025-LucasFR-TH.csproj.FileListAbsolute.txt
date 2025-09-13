@@ -1,0 +1,14 @@
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\bin\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.exe
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\bin\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.deps.json
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\bin\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.runtimeconfig.json
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\bin\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.dll
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\bin\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.pdb
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\obj\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\obj\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.AssemblyInfoInputs.cache
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\obj\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.AssemblyInfo.cs
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\obj\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.csproj.CoreCompileInputs.cache
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\obj\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.dll
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\obj\Debug\net8.0\refint\tl2-tp4-2025-LucasFR-TH.dll
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\obj\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.pdb
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\obj\Debug\net8.0\tl2-tp4-2025-LucasFR-TH.genruntimeconfig.cache
+D:\PROGRAMACION\TALLER 2\tp04\tl2-tp4-2025-LucasFR-TH\obj\Debug\net8.0\ref\tl2-tp4-2025-LucasFR-TH.dll
