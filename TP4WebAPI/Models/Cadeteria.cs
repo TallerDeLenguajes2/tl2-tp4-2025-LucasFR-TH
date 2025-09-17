@@ -49,21 +49,34 @@ public class Cadeteria
     public Cadete BuscarCadete(int id) => Cadetes.FirstOrDefault(c => c.IDCadete == id);
 
     // Agregar el método JornalACobrar en la clase Cadeteria que recibe como parámetro el id del cadete y devuelve el monto a cobrar para dicho cadete 
-    public double JornalACobrar(int id)
+    // Método para calcular el jornal de un cadete
+    public double JornalACobrar(int idCadete)
     {
-        float pagar = 0;
-        for (int i = 0; i < Pedidos.Count; i++)
+        // Buscamos al cadete correspondiente
+        var cadete = Cadetes.FirstOrDefault(c => c.IDCadete == idCadete);
+
+        if (cadete == null)
         {
-            if (Pedidos[i].Cadete.IDCadete == id && Pedidos[i].Estado == "Entregado")
-            {
-                Cadetes[id].PedidosEntregados++;
-                pagar += 500;
-            }
+            Console.WriteLine("Cadete no encontrado.");
+            return 0; // Si no existe, no cobra nada
         }
-        return pagar;
+
+        // Contamos los pedidos entregados de ese cadete
+        int pedidosEntregados = Pedidos.Count(p =>
+            p.Cadete != null &&
+            p.Cadete.IDCadete == idCadete &&
+            p.Estado == "Entregado");
+
+        // Guardamos en el cadete la cantidad de pedidos entregados (opcional)
+        cadete.PedidosEntregados = pedidosEntregados;
+
+        // Cada pedido entregado equivale a $500
+        double jornal = pedidosEntregados * 500;
+
+        return jornal;
     }
 
-    
+
     // metodo para agregar pedido
     public void AgregarPedido(Pedido pedido) => Pedidos.Add(pedido);
 
@@ -71,26 +84,52 @@ public class Cadeteria
     public void QuitarPedido(Pedido pedido) => Pedidos.Remove(pedido);
 
     // asignar el pedido
-
-    // metodo para reasignar un pedido
-    public void ReasignarPedido(Pedido pedido, Cadete cadeteOrigen, Cadete cadeteDestino)
+    public void AsignarCadeteAPedido(int idPedido, int idCadete)
     {
-        QuitarPedido(pedido);
-        AgregarPedido(pedido);
+        var pedido = Pedidos.FirstOrDefault(p => p.NPedido == idPedido);
+        var cadete = Cadetes.FirstOrDefault(c => c.IDCadete == idCadete);
+
+        if (pedido != null && cadete != null)
+        {
+            pedido.Cadete = cadete; // asignamos el cadete al pedido
+        }
     }
 
-    // INFORME // dejo comentado el metodod para crear un informar, en el tp4 creare una clase para poder mostrar estos datos
-    // public void InformeFinal()
-    // {
-    //     Console.WriteLine("========= INFORME FINAL =========");
-    //     int totalPedidos = 0;
-    //     foreach (var cad in Cadetes)
-    //     {
-    //         int entregados = Pedidos.Count(p => p.Estado == "Entregado");
-    //         totalPedidos += entregados;
-    //         Console.WriteLine($"{cad.Nombre} → {cad.PedidosEntregados} entregados | Jornal: ${JornalACobrar(cad.IDCadete)}");
-    //     }
-    //     Console.WriteLine($"Total entregados: {totalPedidos}");
-    //     Console.WriteLine($"Promedio por cadete: {(double)totalPedidos / Cadetes.Count}");
-    // }
+
+    // metodo para reasignar un pedido
+    public void ReasignarPedido(int idPedido, int idCadeteDestino)
+    {
+        var pedido = Pedidos.FirstOrDefault(p => p.NPedido == idPedido);
+        var cadeteDestino = Cadetes.FirstOrDefault(c => c.IDCadete == idCadeteDestino);
+
+        if (pedido != null && cadeteDestino != null)
+        {
+            pedido.Cadete = cadeteDestino;
+        }
+    }
+
+    public List<Pedido> ObtenerPedidos() => Pedidos;
+
+    public List<Cadete> ObtenerCadetes() => Cadetes;
+
+    public object GenerarInforme()
+    {
+        int totalPedidos = Pedidos.Count;
+        int entregados = Pedidos.Count(p => p.Estado == "Entregado");
+        return new
+        {
+            NombreCadeteria = Nombre,
+            TotalPedidos = totalPedidos,
+            Entregados = entregados,
+            PromedioPorCadete = Cadetes.Count > 0 ? (double)entregados / Cadetes.Count : 0
+        };
+    }
+    
+    public bool CambiarEstadoPedido(int idPedido, string nuevoEstado)
+    {
+        var pedido = Pedidos.FirstOrDefault(p => p.NPedido == idPedido);
+        if (pedido == null) return false;
+        pedido.CambiarEstado(nuevoEstado);
+        return true;
+    }
 }
