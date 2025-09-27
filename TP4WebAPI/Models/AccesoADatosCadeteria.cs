@@ -1,5 +1,6 @@
 using EspacioCadeteria;
 using System.Text.Json;
+using System.IO;
 
 namespace EspacioAccesoDatosCadeteria
 {
@@ -30,8 +31,12 @@ namespace EspacioAccesoDatosCadeteria
 
     public class ADCadeteria 
     {
-        // public Cadeteria Obtener() {
-            
-        // } 
+        public Cadeteria Obtener()
+    {
+        if (!File.Exists("Cadeteria.json")) {
+            string json = File.ReadAllText("Cadeteria.json");
+            return JsonSerializer.Deserialize<Cadeteria>(json);
+        }
+    } 
     }
 }

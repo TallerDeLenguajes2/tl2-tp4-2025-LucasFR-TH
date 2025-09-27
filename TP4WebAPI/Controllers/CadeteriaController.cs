@@ -4,6 +4,8 @@ using EspacioPedidos;
 using EspacioCadete;
 using EspacioAccesoDatos;
 using EspacioAccesoDatosCadeteria;
+using EspacioAccesoDatosCadete;
+using EspacioAccesoDatosPedidos;
 
 namespace P4WebAPI.Controllers
 {
