@@ -1,7 +1,5 @@
 namespace EspacioCadete;
 
-using EspacioPedidos;
-
 public class Cadete
 {
     public int IDCadete { get; set; }

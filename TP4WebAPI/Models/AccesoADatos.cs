@@ -1,13 +1,9 @@
-using EspacioCadeteria;
 using EspacioCadete;
-using System.IO;
-using System.Linq;
 using System.Text.Json;
+using EspacioCadeteria;
 
 namespace EspacioAccesoDatos
 {
-    using EspacioCadeteria;
-
     public interface IAccesoADatos
     {
         Cadeteria LeerCadeteria(string archivoCadeteria, string archivoCadetes);

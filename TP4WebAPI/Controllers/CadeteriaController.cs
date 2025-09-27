@@ -2,17 +2,32 @@ using Microsoft.AspNetCore.Mvc;
 using EspacioCadeteria;
 using EspacioPedidos;
 using EspacioCadete;
-using System.Collections.Generic;
+using EspacioAccesoDatos;
+using EspacioAccesoDatosCadeteria;
 
 namespace P4WebAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
 
     public class CadeteriaController : ControllerBase
 
     {
-        private static Cadeteria cadeteria = new Cadeteria(123456, "Cadetería Online", "381-1234567");
+        private Cadeteria cadeteria;
+        private accesoDatosCadeteria ADCadeteria;
+        private accesoDatosCadetes ADCadetes;
+        private accesoDatosPedidos ADPedidos;
+
+        public CadeteriaController()
+        {
+            ADCadeteria= new accesoDatosCadeteria();
+            ADCadetes= new accesoDatosCadetes();
+            ADPedidos= new accesoDatosPedidos();
+            cadeteria= ADCadeteria.Obtener();
+            cadeteria.AgregarCadete(ADCadetes.Obtener());
+            cadeteria.AgregarPedido(ADPedios.Obtener());
+        }
+
 
         // ==========================
         // [GET] Listar todos los pedidos
