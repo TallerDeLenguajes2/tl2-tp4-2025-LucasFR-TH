@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "f:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj": {}
+    "F:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj": {}
   },
   "projects": {
-    "f:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj": {
+    "F:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj",
+        "projectUniqueName": "F:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj",
         "projectName": "TP4WebAPI",
-        "projectPath": "f:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj",
+        "projectPath": "F:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj",
         "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "f:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\obj\\",
+        "outputPath": "F:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
