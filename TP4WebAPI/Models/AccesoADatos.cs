@@ -1,20 +1,24 @@
-using EspacioCadeteria;
 using EspacioCadete;
+using System.Text.Json;
+using EspacioCadeteria;
 using System.IO;
 using System.Linq;
-using System.Text.Json;
+
+// Interfaz y clases auxiliares para abstraer la lectura/escritura de datos.
+// Permite cambiar la fuente (CSV/JSON) sin modificar el resto de la aplicación.
 
 namespace EspacioAccesoDatos
 {
-    using EspacioCadeteria;
-
+    // Contrato mínimo que debe cumplir cualquier adaptador de persistencia
+    // (por ejemplo, CSV o JSON). Permite cargar la Cadeteria y guardarla.
     public interface IAccesoADatos
     {
         Cadeteria LeerCadeteria(string archivoCadeteria, string archivoCadetes);
         void GuardarCadeteria(Cadeteria cadeteria, string archivoDestino);
     }
 
-    // particularizado para CSV
+    // Implementación de IAccesoADatos para archivos CSV.
+    // Lee la cadetería y su listado de cadetes desde ficheros CSV.
     public class AccesoADatosCSV : IAccesoADatos
     {
         public Cadeteria LeerCadeteria(string archivoCadeteria, string archivoCadetes)
@@ -34,6 +38,7 @@ namespace EspacioAccesoDatos
             return cadeteria;
         }
 
+        // Guarda la información básica de la cadetería en formato CSV.
         public void GuardarCadeteria(Cadeteria cadeteria, string archivoDestino)
         {
             using (StreamWriter sw = new StreamWriter(archivoDestino))
@@ -44,7 +49,8 @@ namespace EspacioAccesoDatos
         }
     }
 
-    // particularizado para JSON
+    // Implementación de IAccesoADatos para JSON.
+    // Serializa/deserializa la Cadeteria completa en un fichero JSON.
     public class AccesoADatosJSON : IAccesoADatos
     {
         public Cadeteria LeerCadeteria(string archivoCadeteria, string archivoCadetes)

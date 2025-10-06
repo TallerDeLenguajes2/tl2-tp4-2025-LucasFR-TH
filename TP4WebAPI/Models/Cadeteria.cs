@@ -4,6 +4,9 @@ using System.IO;
 using EspacioCadete;
 using EspacioPedidos;
 
+// Modelo principal: representa la cadetería en memoria.
+// Contiene listas de cadetes y pedidos y la lógica de negocio básica
+// (agregar pedidos, asignar cadetes, calcular jornal, generar informes).
 public class Cadeteria
 {
     public int CUIL { get; set; }
@@ -42,7 +45,7 @@ public class Cadeteria
         }
     }
 
-    // metodo para agregar cadete
+    // Agrega un cadete a la lista en memoria
     public void AgregarCadete(Cadete cadete) => Cadetes.Add(cadete);
 
     // metodo para devolver un cadete mediante su busqueda de ID
@@ -77,13 +80,13 @@ public class Cadeteria
     }
 
 
-    // metodo para agregar pedido
+    // Agrega un pedido a la lista en memoria
     public void AgregarPedido(Pedido pedido) => Pedidos.Add(pedido);
 
     // metodo para quitar pedido
     public void QuitarPedido(Pedido pedido) => Pedidos.Remove(pedido);
 
-    // asignar el pedido
+    // Asigna un cadete a un pedido por sus IDs
     public void AsignarCadeteAPedido(int idPedido, int idCadete)
     {
         var pedido = Pedidos.FirstOrDefault(p => p.NPedido == idPedido);
@@ -96,7 +99,7 @@ public class Cadeteria
     }
 
 
-    // metodo para reasignar un pedido
+    // Reasigna un pedido a otro cadete (por IDs)
     public void ReasignarPedido(int idPedido, int idCadeteDestino)
     {
         var pedido = Pedidos.FirstOrDefault(p => p.NPedido == idPedido);
@@ -108,8 +111,10 @@ public class Cadeteria
         }
     }
 
+    // Devuelve la lista actual de pedidos (para persistencia o consulta)
     public List<Pedido> ObtenerPedidos() => Pedidos;
 
+    // Devuelve la lista actual de cadetes
     public List<Cadete> ObtenerCadetes() => Cadetes;
 
     public object GenerarInforme()

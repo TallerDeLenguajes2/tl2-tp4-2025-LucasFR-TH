@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj": {}
+    "F:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj": {
+    "F:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj",
+        "projectUniqueName": "F:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj",
         "projectName": "TP4WebAPI",
-        "projectPath": "D:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj",
-        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-        "outputPath": "D:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\obj\\",
+        "projectPath": "F:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\TP4WebAPI.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "F:\\PROGRAMACION\\TALLER 2\\tp04\\tl2-tp4-2025-LucasFR-TH\\TP4WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,7 +45,7 @@
           "dependencies": {
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[9.0.6, )"
             }
           },
           "imports": [
@@ -69,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.414/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
