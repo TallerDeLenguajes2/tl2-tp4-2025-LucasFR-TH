@@ -3,7 +3,8 @@ namespace EspacioPedidos;
 using EspacioCliente;
 using EspacioCadete;
 
-// creo la clase de pedidos
+// Representa un pedido realizado por un cliente.
+// Contiene referencia al cliente, posible cadete asignado y el estado.
 public class Pedido
 {
     public int NPedido { get; set; }
@@ -28,10 +29,11 @@ public class Pedido
         Estado = estado;
     }
 
-    // metodos para devolver datos del cliente
+    // Devuelve algunos datos del cliente asociados al pedido
     public string VerDireccionCliente() => Cliente.Direccion;
 
     public string VerNombreCliente() => Cliente.Nombre;
 
+    // Cambia el estado interno del pedido (persistir fuera si corresponde)
     public void CambiarEstado(string nuevoEstado) => Estado = nuevoEstado;
 }

@@ -4,11 +4,15 @@ using System.IO;
 
 namespace EspacioAccesoDatosCadeteria
 {
-    using EspacioCadeteria;
+    // Clase responsable de leer/escribir la configuración básica de la cadetería
+    // desde/hacia el archivo JSON `Cadeteria.json`.
     public class accesoDatosCadeteria
     {
+        // Ruta del archivo donde se guarda la información de la cadetería
         private readonly string filePath = "Cadeteria.json";
 
+        // Devuelve una instancia de Cadeteria cargada desde JSON.
+        // Si el archivo no existe retorna una Cadeteria por defecto.
         public Cadeteria Obtener()
         {
             if (!File.Exists(filePath))
