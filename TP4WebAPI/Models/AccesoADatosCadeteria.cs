@@ -4,39 +4,17 @@ using System.IO;
 
 namespace EspacioAccesoDatosCadeteria
 {
-    public interface IAccesoADatos
+    using EspacioCadeteria;
+    public class accesoDatosCadeteria
     {
-        Cadeteria LeerCadeteria(string archivoCadeteria, string archivoCadetes);
-        void GuardarCadeteria(Cadeteria cadeteria, string archivoDestino);
-    }
+        private readonly string filePath = "Cadeteria.json";
 
-    // particularizado para JSON
-    public class AccesoADatosJSON : IAccesoADatos
-    {
-        public Cadeteria LeerCadeteria(string archivoCadeteria, string archivoCadetes)
-        {
-            string jsonString = File.ReadAllText(archivoCadeteria);
-            Cadeteria cadeteria = JsonSerializer.Deserialize<Cadeteria>(jsonString);
-
-            return cadeteria;
-        }
-
-        public void GuardarCadeteria(Cadeteria cadeteria, string archivoDestino)
-        {
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string jsonString = JsonSerializer.Serialize(cadeteria, options);
-            File.WriteAllText(archivoDestino, jsonString);
-        }
-    }
-
-    public class ADCadeteria 
-    {
         public Cadeteria Obtener()
-    {
-        if (!File.Exists("Cadeteria.json")) {
-            string json = File.ReadAllText("Cadeteria.json");
-            return JsonSerializer.Deserialize<Cadeteria>(json);
+        {
+            if (!File.Exists(filePath))
+                return new Cadeteria(0, "", "");
+            var json = File.ReadAllText(filePath);
+            return JsonSerializer.Deserialize<Cadeteria>(json) ?? new Cadeteria(0, "", "");
         }
-    } 
     }
 }
